@@ -58,7 +58,7 @@ export default function Index() {
       date: "Tháng 2/1951",
       title: "Đại hội II - Đảng Lao động Việt Nam",
       description:
-        "Đảng Cộng sản Đông Dương (766.000 đảng viên) chuyển sang hoạt động công khai, Hồ Chí Minh làm Chủ tịch",
+        "Đảng Cộng sản Đông Dương (766.000 đảng viên) chuyển sang hoạt động công khai, Hồ Chí Minh l��m Chủ tịch",
       significance:
         "Xác định đường lối kháng chiến toàn dân, toàn diện, trường kỳ",
       category: "domestic"
@@ -270,13 +270,13 @@ export default function Index() {
               </CardTitle>
               <CardDescription className="text-lg text-red-700">
                 Sự lãnh đạo của Đảng trong việc lập kế hoạch, quyết định mở
-                chiến dịch, và đối phó với kế hoạch Navarre của Pháp
+                chiến d���ch, và đối phó với kế hoạch Navarre của Pháp
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-red-800">
+                  <h4 className="historical-subtitle text-xl font-semibold mb-4 text-red-800">
                     Timeline Tương Tác
                   </h4>
                   <div className="space-y-4">
@@ -311,7 +311,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="bg-gradient-to-br from-red-50 to-yellow-50 p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold mb-4 text-red-800">
+                  <h4 className="historical-subtitle text-xl font-semibold mb-4 text-red-800">
                     Ý nghĩa trong lãnh đạo Đảng
                   </h4>
                   <ul className="space-y-3 text-sm">
