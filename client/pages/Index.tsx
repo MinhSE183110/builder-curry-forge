@@ -58,7 +58,7 @@ export default function Index() {
       date: "Tháng 2/1951",
       title: "Đại hội II - Đảng Lao động Việt Nam",
       description:
-        "Đảng Cộng sản Đông Dương (766.000 đảng viên) chuyển sang hoạt động công khai, Hồ Chí Minh l��m Chủ tịch",
+        "Đảng Cộng sản Đông Dương (766.000 đảng viên) chuyển sang hoạt động công khai, Hồ Chí Minh làm Chủ tịch",
       significance:
         "Xác định đường lối kháng chiến toàn dân, toàn diện, trường kỳ",
       category: "domestic"
@@ -245,7 +245,7 @@ export default function Index() {
               </div>
 
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg">
-                <h4 className="font-semibold mb-3 text-blue-800">Ý nghĩa trong lãnh đạo Đảng</h4>
+                <h4 className="historical-subtitle font-semibold mb-3 text-blue-800">Ý nghĩa trong lãnh đạo Đảng</h4>
                 <div className="grid md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <h5 className="font-medium mb-1">Phân tích đúng bối cảnh</h5>
@@ -270,7 +270,7 @@ export default function Index() {
               </CardTitle>
               <CardDescription className="text-lg text-red-700">
                 Sự lãnh đạo của Đảng trong việc lập kế hoạch, quyết định mở
-                chiến d���ch, và đối phó với kế hoạch Navarre của Pháp
+                chiến dịch, và đối phó với kế hoạch Navarre c���a Pháp
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8">
@@ -458,7 +458,7 @@ export default function Index() {
               </Accordion>
 
               <div className="mt-6 p-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-lg">
-                <h4 className="font-semibold mb-2 text-yellow-800">
+                <h4 className="historical-subtitle font-semibold mb-2 text-yellow-800">
                   Ý nghĩa trong lãnh đạo Đảng
                 </h4>
                 <p className="text-sm">
@@ -486,7 +486,7 @@ export default function Index() {
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-green-800">
+                  <h4 className="historical-subtitle text-xl font-semibold mb-4 text-green-800">
                     Bản đồ tương tác chiến trường
                   </h4>
                   <div className="relative bg-gradient-to-b from-green-100 to-green-200 rounded-lg p-6 h-80">
@@ -529,7 +529,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-green-800">
+                  <h4 className="historical-subtitle text-xl font-semibold mb-4 text-green-800">
                     Chi tiết các đợt tấn công
                   </h4>
                   <div className="space-y-4">
@@ -574,7 +574,7 @@ export default function Index() {
               </div>
 
               <div className="mt-8 p-6 bg-gradient-to-r from-green-100 to-yellow-100 rounded-lg">
-                <h4 className="font-semibold mb-3 text-green-800">
+                <h4 className="historical-subtitle font-semibold mb-3 text-green-800">
                   Ý nghĩa trong lãnh đạo Đảng
                 </h4>
                 <div className="grid md:grid-cols-2 gap-4 text-sm">
