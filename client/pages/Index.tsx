@@ -13,14 +13,25 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Map, Users, Flag, Archive, Target, Globe, TrendingUp } from "lucide-react";
+import {
+  Calendar,
+  Map,
+  Users,
+  Flag,
+  Archive,
+  Target,
+  Globe,
+  TrendingUp,
+} from "lucide-react";
 
 export default function Index() {
   const [activeTimelineItem, setActiveTimelineItem] = useState<string | null>(
     null,
   );
   const [activeMapPoint, setActiveMapPoint] = useState<string | null>(null);
-  const [activeHistoricalEvent, setActiveHistoricalEvent] = useState<string | null>(null);
+  const [activeHistoricalEvent, setActiveHistoricalEvent] = useState<
+    string | null
+  >(null);
 
   const historicalEvents = [
     {
@@ -29,9 +40,8 @@ export default function Index() {
       title: "Liên Xô chế tạo bom nguyên tử",
       description:
         "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay đổi cán cân quyền lực thế giới",
-      significance:
-        "Hỗ trợ tinh thần cho các phong trào giải phóng dân tộc",
-      category: "international"
+      significance: "Hỗ trợ tinh thần cho các phong trào giải phóng dân tộc",
+      category: "international",
     },
     {
       id: "france-us-agreement",
@@ -39,9 +49,8 @@ export default function Index() {
       title: "Hiệp định Phòng thủ chung Pháp-Mỹ",
       description:
         "Pháp ký hiệp định với Mỹ, nhận viện trợ để thực hiện 'Chiến tranh đơn phương' ở Đông Dương",
-      significance:
-        "Pháp ngày càng lệ thuộc vào Mỹ, tạo cơ hội cho Việt Nam",
-      category: "international"
+      significance: "Pháp ngày càng lệ thuộc vào Mỹ, tạo cơ hội cho Việt Nam",
+      category: "international",
     },
     {
       id: "indochina-revolution",
@@ -49,9 +58,8 @@ export default function Index() {
       title: "Phong trào cách mạng Đông Dương",
       description:
         "Đảng Nhân dân Cách mạng Campuchia (28/6/1951), Đảng Nhân dân Lào (22/3/1955) ra đời",
-      significance:
-        "Tạo liên minh chống thực dân Pháp trong khu vực",
-      category: "international"
+      significance: "Tạo liên minh chống thực dân Pháp trong khu vực",
+      category: "international",
     },
     {
       id: "party-transformation",
@@ -61,8 +69,8 @@ export default function Index() {
         "Đảng Cộng sản Đông Dương (766.000 đảng viên) chuyển sang hoạt động công khai, Hồ Chí Minh làm Chủ tịch",
       significance:
         "Xác định đường lối kháng chiến toàn dân, toàn diện, trường kỳ",
-      category: "domestic"
-    }
+      category: "domestic",
+    },
   ];
 
   const timelineEvents = [
@@ -161,82 +169,117 @@ export default function Index() {
                 1. Bối Cảnh Lịch Sử
               </CardTitle>
               <CardDescription className="text-lg text-blue-700">
-                Bối cảnh quốc tế và trong nước từ 1951-1954 tạo điều kiện cho Đảng đẩy mạnh kháng chiến, dẫn đến chiến thắng Điện Biên Phủ
+                Bối cảnh quốc tế và trong nước từ 1951-1954 tạo điều kiện cho
+                Đảng đẩy mạnh kháng chiến, dẫn đến chiến thắng Điện Biên Phủ
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-blue-800">Timeline Bối cảnh Quốc tế</h4>
+                  <h4 className="text-xl font-semibold mb-4 text-blue-800">
+                    Timeline Bối cảnh Quốc tế
+                  </h4>
                   <div className="space-y-4">
-                    {historicalEvents.filter(event => event.category === 'international').map((event) => (
-                      <div
-                        key={event.id}
-                        className={`border-l-4 pl-4 cursor-pointer transition-all duration-300 ${
-                          activeHistoricalEvent === event.id
-                            ? 'border-blue-600 bg-blue-50'
-                            : 'border-gray-300 hover:border-blue-400'
-                        }`}
-                        onClick={() => setActiveHistoricalEvent(
-                          activeHistoricalEvent === event.id ? null : event.id
-                        )}
-                      >
-                        <div className="font-semibold text-blue-700">{event.date}</div>
-                        <div className="font-medium">{event.title}</div>
-                        {activeHistoricalEvent === event.id && (
-                          <div className="mt-2 p-3 bg-white rounded border">
-                            <p className="text-sm mb-2">{event.description}</p>
-                            <p className="text-sm font-medium text-blue-600">
-                              Ý nghĩa: {event.significance}
-                            </p>
+                    {historicalEvents
+                      .filter((event) => event.category === "international")
+                      .map((event) => (
+                        <div
+                          key={event.id}
+                          className={`border-l-4 pl-4 cursor-pointer transition-all duration-300 ${
+                            activeHistoricalEvent === event.id
+                              ? "border-blue-600 bg-blue-50"
+                              : "border-gray-300 hover:border-blue-400"
+                          }`}
+                          onClick={() =>
+                            setActiveHistoricalEvent(
+                              activeHistoricalEvent === event.id
+                                ? null
+                                : event.id,
+                            )
+                          }
+                        >
+                          <div className="font-semibold text-blue-700">
+                            {event.date}
                           </div>
-                        )}
-                      </div>
-                    ))}
+                          <div className="font-medium">{event.title}</div>
+                          {activeHistoricalEvent === event.id && (
+                            <div className="mt-2 p-3 bg-white rounded border">
+                              <p className="text-sm mb-2">
+                                {event.description}
+                              </p>
+                              <p className="text-sm font-medium text-blue-600">
+                                Ý nghĩa: {event.significance}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      ))}
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-blue-800">Bối cảnh Trong nước</h4>
+                  <h4 className="text-xl font-semibold mb-4 text-blue-800">
+                    Bối cảnh Trong nước
+                  </h4>
                   <div className="space-y-4">
-                    {historicalEvents.filter(event => event.category === 'domestic').map((event) => (
-                      <div
-                        key={event.id}
-                        className={`border-l-4 pl-4 cursor-pointer transition-all duration-300 ${
-                          activeHistoricalEvent === event.id
-                            ? 'border-blue-600 bg-blue-50'
-                            : 'border-gray-300 hover:border-blue-400'
-                        }`}
-                        onClick={() => setActiveHistoricalEvent(
-                          activeHistoricalEvent === event.id ? null : event.id
-                        )}
-                      >
-                        <div className="font-semibold text-blue-700">{event.date}</div>
-                        <div className="font-medium">{event.title}</div>
-                        {activeHistoricalEvent === event.id && (
-                          <div className="mt-2 p-3 bg-white rounded border">
-                            <p className="text-sm mb-2">{event.description}</p>
-                            <p className="text-sm font-medium text-blue-600">
-                              Ý nghĩa: {event.significance}
-                            </p>
+                    {historicalEvents
+                      .filter((event) => event.category === "domestic")
+                      .map((event) => (
+                        <div
+                          key={event.id}
+                          className={`border-l-4 pl-4 cursor-pointer transition-all duration-300 ${
+                            activeHistoricalEvent === event.id
+                              ? "border-blue-600 bg-blue-50"
+                              : "border-gray-300 hover:border-blue-400"
+                          }`}
+                          onClick={() =>
+                            setActiveHistoricalEvent(
+                              activeHistoricalEvent === event.id
+                                ? null
+                                : event.id,
+                            )
+                          }
+                        >
+                          <div className="font-semibold text-blue-700">
+                            {event.date}
                           </div>
-                        )}
-                      </div>
-                    ))}
+                          <div className="font-medium">{event.title}</div>
+                          {activeHistoricalEvent === event.id && (
+                            <div className="mt-2 p-3 bg-white rounded border">
+                              <p className="text-sm mb-2">
+                                {event.description}
+                              </p>
+                              <p className="text-sm font-medium text-blue-600">
+                                Ý nghĩa: {event.significance}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      ))}
                   </div>
 
                   <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                    <h5 className="font-semibold mb-2 text-blue-800">So sánh lực lượng</h5>
+                    <h5 className="font-semibold mb-2 text-blue-800">
+                      So sánh lực lượng
+                    </h5>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="text-center p-3 bg-white rounded">
                         <div className="font-bold text-blue-800">Việt Nam</div>
-                        <div className="text-green-600">+ Hỗ trợ từ Liên Xô</div>
-                        <div className="text-green-600">+ Liên minh Đông Dương</div>
-                        <div className="text-green-600">+ Kháng chiến toàn dân</div>
+                        <div className="text-green-600">
+                          + Hỗ trợ từ Liên Xô
+                        </div>
+                        <div className="text-green-600">
+                          + Liên minh Đông Dương
+                        </div>
+                        <div className="text-green-600">
+                          + Kháng chiến toàn dân
+                        </div>
                       </div>
                       <div className="text-center p-3 bg-white rounded">
                         <div className="font-bold text-blue-800">Pháp</div>
                         <div className="text-red-600">- Lệ thuộc vào Mỹ</div>
-                        <div className="text-red-600">- Chiến tranh đơn phương</div>
+                        <div className="text-red-600">
+                          - Chiến tranh đơn phương
+                        </div>
                         <div className="text-red-600">- Áp lực quốc tế</div>
                       </div>
                     </div>
@@ -245,15 +288,27 @@ export default function Index() {
               </div>
 
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg">
-                <h4 className="historical-subtitle font-semibold mb-3 text-blue-800">Ý nghĩa trong lãnh đạo Đảng</h4>
+                <h4 className="historical-subtitle font-semibold mb-3 text-blue-800">
+                  Ý nghĩa trong lãnh đạo Đảng
+                </h4>
                 <div className="grid md:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <h5 className="font-medium mb-1">Phân tích đúng bối cảnh</h5>
-                    <p>Đảng nắm bắt thời cơ quốc tế và trong nước để đề ra đường lối đúng đắn</p>
+                    <h5 className="font-medium mb-1">
+                      Phân tích đúng bối cảnh
+                    </h5>
+                    <p>
+                      Đảng nắm bắt thời cơ quốc tế và trong nước để đề ra đường
+                      lối đúng đắn
+                    </p>
                   </div>
                   <div>
-                    <h5 className="font-medium mb-1">Chuyển sang quyết chiến</h5>
-                    <p>Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế và liên minh khu vực</p>
+                    <h5 className="font-medium mb-1">
+                      Chuyển sang quyết chiến
+                    </h5>
+                    <p>
+                      Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế và
+                      liên minh khu vực
+                    </p>
                   </div>
                 </div>
               </div>

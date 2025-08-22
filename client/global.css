@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=EB+Garamond:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=EB+Garamond:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -104,7 +104,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'EB Garamond', 'Playfair Display', 'Times New Roman', serif;
+    font-family: "EB Garamond", "Playfair Display", "Times New Roman", serif;
   }
 
   /* Vietnamese text optimization */
@@ -115,7 +115,7 @@
 
   /* Historical background for hero */
   .hero-background {
-    background-image: url('https://cdn.builder.io/api/v1/image/assets%2Ff4ff908ba57646249c1b8243527e63b1%2Ffc40ebd939284c8a965386a5751af483?format=webp&width=800');
+    background-image: url("https://cdn.builder.io/api/v1/image/assets%2Ff4ff908ba57646249c1b8243527e63b1%2Ffc40ebd939284c8a965386a5751af483?format=webp&width=800");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,19 +123,19 @@
 
   /* Historical fonts */
   .historical-title {
-    font-family: 'Cinzel', 'Playfair Display', serif;
+    font-family: "Cinzel", "Playfair Display", serif;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   .historical-subtitle {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
 
   .historical-body {
-    font-family: 'EB Garamond', serif;
+    font-family: "EB Garamond", serif;
     font-weight: 400;
   }
 
