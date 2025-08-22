@@ -102,5 +102,21 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Vietnamese text optimization */
+  .vietnamese-text {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+  }
+
+  /* Historical theme colors */
+  .historical-red {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  }
+
+  .historical-gold {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
   }
 }
