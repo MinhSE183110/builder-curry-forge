@@ -82,7 +82,7 @@ export default function Index() {
       description:
         'Pháp tập trung "quả đấm thép" tại Điện Biên Phủ, biến thành "pháo đài bất khả xâm phạm"',
       significance:
-        "Đảng chỉ đạo giữ chủ động, phân tán địch qua các chiến dịch",
+        "Đảng chỉ đạo giữ chủ động, phân tán địch qua các chi���n dịch",
     },
     {
       id: "decision",
@@ -604,11 +604,11 @@ export default function Index() {
 
         {/* Footer */}
         <footer className="text-center py-8 border-t border-gray-200">
-          <p className="text-gray-600">
+          <p className="historical-body text-gray-600">
             Sản phẩm trải nghiệm về Chiến thắng Điện Biên Phủ - Môn học Lịch sử
             Đảng
           </p>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="historical-body text-sm text-gray-500 mt-2">
             Nội dung dựa trên Session 13, Session 14 và Giáo trình Lịch sử Đảng
             Cộng sản Việt Nam (trang 160-179)
           </p>
