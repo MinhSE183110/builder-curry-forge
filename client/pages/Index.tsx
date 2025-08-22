@@ -28,7 +28,7 @@ export default function Index() {
       date: "1949",
       title: "Liên Xô chế tạo bom nguyên tử",
       description:
-        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay đổi cán cân quyền lực thế gi��i",
+        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay đổi cán cân quyền lực thế giới",
       significance:
         "Hỗ trợ tinh thần cho các phong trào giải phóng dân tộc",
       category: "international"
@@ -121,18 +121,18 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-yellow-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-red-600 to-red-800 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="relative hero-background text-white">
+        <div className="absolute inset-0 hero-overlay"></div>
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="historical-title text-5xl md:text-6xl font-bold mb-6">
               Chiến Thắng Điện Biên Phủ
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-red-100">
+            <p className="historical-subtitle text-xl md:text-2xl mb-8 text-red-100">
               Nội Dung Chi Tiết Cho Sản Phẩm Trải Nghiệm Về Chiến Thắng Điện
               Biên Phủ
             </p>
-            <p className="text-lg text-red-200 mb-8">
+            <p className="historical-body text-lg text-red-200 mb-8">
               Môn học: Lịch sử Đảng - Khám phá vai trò lãnh đạo của Đảng trong
               chiến thắng lịch sử
             </p>
@@ -140,7 +140,7 @@ export default function Index() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-white text-red-800 hover:bg-red-50"
+                className="historical-body bg-white text-red-800 hover:bg-red-50 border-2 border-red-800 shadow-lg"
               >
                 <Flag className="mr-2" />
                 Khám phá lịch sử
@@ -447,7 +447,7 @@ export default function Index() {
                         <div>
                           <h5 className="font-semibold">Vượt địa hình</h5>
                           <p className="text-sm">
-                            Linh hoạt, chủ động vượt gian khổ mưa lũ, địa hình
+                            Linh hoạt, chủ động vượt gian kh�� mưa lũ, địa hình
                             hiểm trở
                           </p>
                         </div>
