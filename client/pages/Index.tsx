@@ -13,13 +13,57 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Map, Users, Flag, Archive, Target } from "lucide-react";
+import { Calendar, Map, Users, Flag, Archive, Target, Globe, TrendingUp } from "lucide-react";
 
 export default function Index() {
   const [activeTimelineItem, setActiveTimelineItem] = useState<string | null>(
     null,
   );
   const [activeMapPoint, setActiveMapPoint] = useState<string | null>(null);
+  const [activeHistoricalEvent, setActiveHistoricalEvent] = useState<string | null>(null);
+
+  const historicalEvents = [
+    {
+      id: "soviet-bomb",
+      date: "1949",
+      title: "Liên Xô chế tạo bom nguyên tử",
+      description:
+        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay đổi cán cân quyền lực thế gi��i",
+      significance:
+        "Hỗ trợ tinh thần cho các phong trào giải phóng dân tộc",
+      category: "international"
+    },
+    {
+      id: "france-us-agreement",
+      date: "23/12/1950",
+      title: "Hiệp định Phòng thủ chung Pháp-Mỹ",
+      description:
+        "Pháp ký hiệp định với Mỹ, nhận viện trợ để thực hiện 'Chiến tranh đơn phương' ở Đông Dương",
+      significance:
+        "Pháp ngày càng lệ thuộc vào Mỹ, tạo cơ hội cho Việt Nam",
+      category: "international"
+    },
+    {
+      id: "indochina-revolution",
+      date: "1951-1955",
+      title: "Phong trào cách mạng Đông Dương",
+      description:
+        "Đảng Nhân dân Cách mạng Campuchia (28/6/1951), Đảng Nhân dân Lào (22/3/1955) ra đời",
+      significance:
+        "Tạo liên minh chống thực dân Pháp trong khu vực",
+      category: "international"
+    },
+    {
+      id: "party-transformation",
+      date: "Tháng 2/1951",
+      title: "Đại hội II - Đảng Lao động Việt Nam",
+      description:
+        "Đảng Cộng sản Đông Dương (766.000 đảng viên) chuyển sang hoạt động công khai, Hồ Chí Minh làm Chủ tịch",
+      significance:
+        "Xác định đường lối kháng chiến toàn dân, toàn diện, trường kỳ",
+      category: "domestic"
+    }
+  ];
 
   const timelineEvents = [
     {
@@ -108,13 +152,121 @@ export default function Index() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-        {/* Section 1: Strategic Preparation */}
+        {/* Section 1: Historical Context */}
+        <section className="mb-16">
+          <Card className="border-blue-200 shadow-lg">
+            <CardHeader className="bg-gradient-to-r from-blue-100 to-blue-50">
+              <CardTitle className="text-3xl text-blue-800 flex items-center">
+                <Globe className="mr-3 text-blue-600" />
+                1. Bối Cảnh Lịch Sử
+              </CardTitle>
+              <CardDescription className="text-lg text-blue-700">
+                Bối cảnh quốc tế và trong nước từ 1951-1954 tạo điều kiện cho Đảng đẩy mạnh kháng chiến, dẫn đến chiến thắng Điện Biên Phủ
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-semibold mb-4 text-blue-800">Timeline Bối cảnh Quốc tế</h4>
+                  <div className="space-y-4">
+                    {historicalEvents.filter(event => event.category === 'international').map((event) => (
+                      <div
+                        key={event.id}
+                        className={`border-l-4 pl-4 cursor-pointer transition-all duration-300 ${
+                          activeHistoricalEvent === event.id
+                            ? 'border-blue-600 bg-blue-50'
+                            : 'border-gray-300 hover:border-blue-400'
+                        }`}
+                        onClick={() => setActiveHistoricalEvent(
+                          activeHistoricalEvent === event.id ? null : event.id
+                        )}
+                      >
+                        <div className="font-semibold text-blue-700">{event.date}</div>
+                        <div className="font-medium">{event.title}</div>
+                        {activeHistoricalEvent === event.id && (
+                          <div className="mt-2 p-3 bg-white rounded border">
+                            <p className="text-sm mb-2">{event.description}</p>
+                            <p className="text-sm font-medium text-blue-600">
+                              Ý nghĩa: {event.significance}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold mb-4 text-blue-800">Bối cảnh Trong nước</h4>
+                  <div className="space-y-4">
+                    {historicalEvents.filter(event => event.category === 'domestic').map((event) => (
+                      <div
+                        key={event.id}
+                        className={`border-l-4 pl-4 cursor-pointer transition-all duration-300 ${
+                          activeHistoricalEvent === event.id
+                            ? 'border-blue-600 bg-blue-50'
+                            : 'border-gray-300 hover:border-blue-400'
+                        }`}
+                        onClick={() => setActiveHistoricalEvent(
+                          activeHistoricalEvent === event.id ? null : event.id
+                        )}
+                      >
+                        <div className="font-semibold text-blue-700">{event.date}</div>
+                        <div className="font-medium">{event.title}</div>
+                        {activeHistoricalEvent === event.id && (
+                          <div className="mt-2 p-3 bg-white rounded border">
+                            <p className="text-sm mb-2">{event.description}</p>
+                            <p className="text-sm font-medium text-blue-600">
+                              Ý nghĩa: {event.significance}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                    <h5 className="font-semibold mb-2 text-blue-800">So sánh lực lượng</h5>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="text-center p-3 bg-white rounded">
+                        <div className="font-bold text-blue-800">Việt Nam</div>
+                        <div className="text-green-600">+ Hỗ trợ từ Liên Xô</div>
+                        <div className="text-green-600">+ Liên minh Đông Dương</div>
+                        <div className="text-green-600">+ Kháng chiến toàn dân</div>
+                      </div>
+                      <div className="text-center p-3 bg-white rounded">
+                        <div className="font-bold text-blue-800">Pháp</div>
+                        <div className="text-red-600">- Lệ thuộc vào Mỹ</div>
+                        <div className="text-red-600">- Chiến tranh đơn phương</div>
+                        <div className="text-red-600">- Áp lực quốc tế</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg">
+                <h4 className="font-semibold mb-3 text-blue-800">Ý nghĩa trong lãnh đạo Đảng</h4>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <h5 className="font-medium mb-1">Phân tích đúng bối cảnh</h5>
+                    <p>Đảng nắm bắt thời cơ quốc tế và trong nước để đề ra đường lối đúng đắn</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium mb-1">Chuyển sang quyết chiến</h5>
+                    <p>Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế và liên minh khu vực</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+        {/* Section 2: Strategic Preparation */}
         <section className="mb-16">
           <Card className="border-red-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-red-100 to-red-50">
               <CardTitle className="text-3xl text-red-800 flex items-center">
                 <Calendar className="mr-3 text-red-600" />
-                1. Chuẩn Bị Chiến Lược
+                2. Chuẩn Bị Chiến Lược
               </CardTitle>
               <CardDescription className="text-lg text-red-700">
                 Sự lãnh đạo của Đảng trong việc lập kế hoạch, quyết định mở
@@ -186,13 +338,13 @@ export default function Index() {
           </Card>
         </section>
 
-        {/* Section 2: Logistics */}
+        {/* Section 3: Logistics */}
         <section className="mb-16">
           <Card className="border-yellow-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-yellow-100 to-yellow-50">
               <CardTitle className="text-3xl text-yellow-800 flex items-center">
                 <Archive className="mr-3 text-yellow-600" />
-                2. Hậu Cần
+                3. Hậu Cần
               </CardTitle>
               <CardDescription className="text-lg text-yellow-700">
                 Vai trò hậu phương nhân dân và ngành hậu cần trong việc cung cấp
@@ -318,13 +470,13 @@ export default function Index() {
           </Card>
         </section>
 
-        {/* Section 3: Attack */}
+        {/* Section 4: Attack */}
         <section className="mb-16">
           <Card className="border-green-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-green-100 to-green-50">
               <CardTitle className="text-3xl text-green-800 flex items-center">
                 <Target className="mr-3 text-green-600" />
-                3. Tiến Công
+                4. Tiến Công
               </CardTitle>
               <CardDescription className="text-lg text-green-700">
                 Các đợt tấn công, chiến thuật "đánh chắc tiến chắc", dẫn đến
