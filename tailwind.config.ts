@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        vietnam: {
+          red: "#da020e",
+          "red-dark": "#b91c1c",
+          gold: "#ffcd07",
+          "gold-dark": "#f59e0b",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
