@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/spa/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "dist/server/node-build.mjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/dist/server/node-build.mjs"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/spa/$1"
+    }
+  ],
+  "outputDirectory": "dist",
+  "buildCommand": "pnpm install && pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install"
+}
