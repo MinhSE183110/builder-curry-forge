@@ -39,7 +39,7 @@ export default function Index() {
       date: "1949",
       title: "Liên Xô chế tạo bom nguyên tử",
       description:
-        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay ��ổi cán cân quyền lực thế giới",
+        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay đổi cán cân quyền lực thế giới",
       significance: "Hỗ trợ tinh thần cho các phong trào giải phóng dân tộc",
       category: "international",
     },
@@ -108,21 +108,21 @@ export default function Index() {
       name: "Đợt 1: Him Lam và Độc Lập",
       date: "13-17/3/1954",
       description: "Tấn công và tiêu diệt các cứ điểm phía Bắc",
-      position: { x: 216, y: 155, usePixels: true },
+      position: { x: 66, y: 158, usePixels: true },
     },
     {
       id: "phase-2",
       name: "Đợt 2: Đông Mường Thanh",
       date: "30/3-26/4/1954",
       description: "Tấn công Đông Mường Thanh, diệt đồi A1, C1",
-      position: { x: 60, y: 40 },
+      position: { x: 267, y: 169, usePixels: true },
     },
     {
       id: "phase-3",
       name: "Đợt 3: Tổng công kích",
       date: "1-7/5/1954",
       description: "Chiếm hầm De Castries lúc 17h30 ngày 7/5/1954",
-      position: { x: 50, y: 70 },
+      position: { x: 61, y: 130, usePixels: true },
     },
   ];
 
@@ -268,7 +268,7 @@ export default function Index() {
                           + Hỗ trợ từ Liên Xô
                         </div>
                         <div className="text-green-600">
-                          + Liên minh Đông Dư��ng
+                          + Liên minh Đông Dương
                         </div>
                         <div className="text-green-600">
                           + Kháng chiến toàn dân
