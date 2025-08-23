@@ -591,7 +591,6 @@ export default function Index() {
                               <div className="mt-2 text-gray-700">
                                 {phase.description}
                               </div>
-                              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-r-2 border-b-2 border-green-600 rotate-45"></div>
                             </div>
                           )}
                         </div>
