@@ -544,9 +544,16 @@ export default function Index() {
                   <h4 className="historical-subtitle text-xl font-semibold mb-4 text-green-800">
                     Bản đồ tương tác chiến trường
                   </h4>
-                  <div className="relative bg-gradient-to-b from-green-100 to-green-200 rounded-lg p-6 h-80">
-                    <div className="text-center text-green-800 font-semibold mb-4">
-                      Điện Biên Phủ
+                  <div
+                    className="relative rounded-lg p-6 h-80 bg-cover bg-center bg-no-repeat"
+                    style={{
+                      backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2Ff4ff908ba57646249c1b8243527e63b1%2F46d76655972a4293976f9c6b4aa79db0')",
+                      backgroundSize: "cover"
+                    }}
+                  >
+                    <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
+                    <div className="relative text-center text-white font-semibold mb-4 text-shadow">
+                      Bản đồ Chiến trường Điện Biên Phủ
                     </div>
                     {battlePhases.map((phase) => (
                       <div
