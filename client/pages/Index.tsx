@@ -306,7 +306,7 @@ export default function Index() {
                       Chuyển sang quyết chiến
                     </h5>
                     <p>
-                      Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế và
+                      Từ phòng ngự sang tiến công, t��n dụng sự hỗ trợ quốc tế và
                       liên minh khu vực
                     </p>
                   </div>
@@ -574,14 +574,15 @@ export default function Index() {
                           )
                         }
                       >
-                        <div className="absolute top-5 left-1/2 transform -translate-x-1/2 w-48 z-10">
+                        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-56 z-20">
                           {activeMapPoint === phase.id && (
-                            <div className="bg-white p-3 rounded shadow-lg border text-sm">
-                              <div className="font-semibold text-green-800">
+                            <div className="bg-white p-4 rounded-lg shadow-xl border-2 border-green-600 text-sm">
+                              <div className="font-semibold text-green-800 mb-1">
                                 {phase.name}
                               </div>
-                              <div className="text-green-600">{phase.date}</div>
-                              <div className="mt-1">{phase.description}</div>
+                              <div className="text-green-600 font-medium">{phase.date}</div>
+                              <div className="mt-2 text-gray-700">{phase.description}</div>
+                              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-r-2 border-b-2 border-green-600 rotate-45"></div>
                             </div>
                           )}
                         </div>
