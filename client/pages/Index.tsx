@@ -90,7 +90,7 @@ export default function Index() {
       description:
         'Pháp tập trung "quả đấm thép" tại Điện Biên Phủ, biến thành "pháo đài bất khả xâm phạm"',
       significance:
-        "Đảng chỉ đạo giữ chủ động, phân tán địch qua các chi���n dịch",
+        "Đảng chỉ đạo giữ chủ động, phân tán địch qua các chiến dịch",
     },
     {
       id: "decision",
@@ -306,7 +306,7 @@ export default function Index() {
                       Chuyển sang quyết chiến
                     </h5>
                     <p>
-                      Từ phòng ngự sang tiến công, t��n dụng sự hỗ trợ quốc tế
+                      Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế
                       và liên minh khu vực
                     </p>
                   </div>
@@ -325,7 +325,7 @@ export default function Index() {
               </CardTitle>
               <CardDescription className="text-lg text-red-700">
                 Sự lãnh đạo của Đảng trong việc lập kế hoạch, quyết định mở
-                chiến dịch, và đối phó với kế hoạch Navarre c���a Pháp
+                chiến dịch, và đối phó với kế hoạch Navarre của Pháp
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8">
@@ -502,7 +502,7 @@ export default function Index() {
                         <div>
                           <h5 className="font-semibold">Vượt địa hình</h5>
                           <p className="text-sm">
-                            Linh hoạt, chủ động vượt gian kh�� mưa lũ, địa hình
+                            Linh hoạt, chủ động vượt gian khổ mưa lũ, địa hình
                             hiểm trở
                           </p>
                         </div>
@@ -634,7 +634,7 @@ export default function Index() {
 
                   <div className="mt-4 p-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg">
                     <h5 className="font-semibold mb-2 text-green-800">
-                      Kết quả chi��n thắng
+                      Kết quả chiến thắng
                     </h5>
                     <p className="text-sm">
                       Diệt 16.200 địch, bắt sống Tướng De Castries, dẫn đến Hiệp
