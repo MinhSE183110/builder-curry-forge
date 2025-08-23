@@ -155,4 +155,9 @@
       rgba(185, 28, 28, 0.85)
     );
   }
+
+  /* Text shadow utility for visibility on backgrounds */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 }
