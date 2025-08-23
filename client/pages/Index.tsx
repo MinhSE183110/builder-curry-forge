@@ -150,9 +150,9 @@ export default function Index() {
                 size="lg"
                 className="historical-body bg-white text-red-800 hover:bg-red-50 border-2 border-red-800 shadow-lg"
                 onClick={() => {
-                  const section = document.getElementById('historical-context');
+                  const section = document.getElementById("historical-context");
                   if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
+                    section.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
@@ -312,8 +312,8 @@ export default function Index() {
                       Chuyển sang quyết chiến
                     </h5>
                     <p>
-                      Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế
-                      và liên minh khu vực
+                      Từ phòng ngự sang tiến công, tận dụng sự hỗ trợ quốc tế và
+                      liên minh khu vực
                     </p>
                   </div>
                 </div>
