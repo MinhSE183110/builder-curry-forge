@@ -558,10 +558,10 @@ export default function Index() {
                     {battlePhases.map((phase) => (
                       <div
                         key={phase.id}
-                        className={`absolute w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
+                        className={`absolute w-6 h-6 rounded-full cursor-pointer transition-all duration-300 border-2 border-white shadow-lg z-10 ${
                           activeMapPoint === phase.id
-                            ? "bg-red-600 scale-150"
-                            : "bg-green-600 hover:bg-green-700"
+                            ? "bg-red-600 scale-150 ring-4 ring-red-300"
+                            : "bg-yellow-500 hover:bg-yellow-400 hover:scale-110"
                         }`}
                         style={{
                           left: `${phase.position.x}%`,
