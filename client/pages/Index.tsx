@@ -115,7 +115,7 @@ export default function Index() {
       name: "Đợt 2: Đông Mường Thanh",
       date: "30/3-26/4/1954",
       description: "Tấn công Đông Mường Thanh, diệt đồi A1, C1",
-      position: { x: 267, y: 169, usePixels: true },
+      position: { x: 101, y: 146, usePixels: true },
     },
     {
       id: "phase-3",
