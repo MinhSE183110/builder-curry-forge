@@ -149,6 +149,12 @@ export default function Index() {
                 variant="secondary"
                 size="lg"
                 className="historical-body bg-white text-red-800 hover:bg-red-50 border-2 border-red-800 shadow-lg"
+                onClick={() => {
+                  const section = document.getElementById('historical-context');
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 <Flag className="mr-2" />
                 Khám phá lịch sử
@@ -161,7 +167,7 @@ export default function Index() {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         {/* Section 1: Historical Context */}
-        <section className="mb-16">
+        <section id="historical-context" className="mb-16">
           <Card className="border-blue-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-blue-100 to-blue-50">
               <CardTitle className="text-3xl text-blue-800 flex items-center">
@@ -463,7 +469,7 @@ export default function Index() {
                         <div className="text-2xl font-bold text-yellow-800">
                           1,824
                         </div>
-                        <div className="text-sm">Tấn thịt</div>
+                        <div className="text-sm">T���n thịt</div>
                       </div>
                       <div className="text-center p-4 bg-yellow-50 rounded">
                         <div className="text-2xl font-bold text-yellow-800">
