@@ -306,8 +306,8 @@ export default function Index() {
                       Chuyển sang quyết chiến
                     </h5>
                     <p>
-                      Từ phòng ngự sang tiến công, t��n dụng sự hỗ trợ quốc tế và
-                      liên minh khu vực
+                      Từ phòng ngự sang tiến công, t��n dụng sự hỗ trợ quốc tế
+                      và liên minh khu vực
                     </p>
                   </div>
                 </div>
@@ -547,8 +547,9 @@ export default function Index() {
                   <div
                     className="relative rounded-lg p-6 h-80 bg-cover bg-center bg-no-repeat"
                     style={{
-                      backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2Ff4ff908ba57646249c1b8243527e63b1%2F46d76655972a4293976f9c6b4aa79db0')",
-                      backgroundSize: "cover"
+                      backgroundImage:
+                        "url('https://cdn.builder.io/api/v1/image/assets%2Ff4ff908ba57646249c1b8243527e63b1%2F46d76655972a4293976f9c6b4aa79db0')",
+                      backgroundSize: "cover",
                     }}
                   >
                     <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
@@ -564,8 +565,12 @@ export default function Index() {
                             : "bg-yellow-500 hover:bg-yellow-400 hover:scale-110"
                         }`}
                         style={{
-                          left: phase.position.usePixels ? `${phase.position.x}px` : `${phase.position.x}%`,
-                          top: phase.position.usePixels ? `${phase.position.y}px` : `${phase.position.y}%`,
+                          left: phase.position.usePixels
+                            ? `${phase.position.x}px`
+                            : `${phase.position.x}%`,
+                          top: phase.position.usePixels
+                            ? `${phase.position.y}px`
+                            : `${phase.position.y}%`,
                           transform: "translate(-50%, -50%)",
                         }}
                         onClick={() =>
@@ -580,8 +585,12 @@ export default function Index() {
                               <div className="font-semibold text-green-800 mb-1">
                                 {phase.name}
                               </div>
-                              <div className="text-green-600 font-medium">{phase.date}</div>
-                              <div className="mt-2 text-gray-700">{phase.description}</div>
+                              <div className="text-green-600 font-medium">
+                                {phase.date}
+                              </div>
+                              <div className="mt-2 text-gray-700">
+                                {phase.description}
+                              </div>
                               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-r-2 border-b-2 border-green-600 rotate-45"></div>
                             </div>
                           )}
