@@ -39,7 +39,7 @@ export default function Index() {
       date: "1949",
       title: "Liên Xô chế tạo bom nguyên tử",
       description:
-        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay đổi cán cân quyền lực thế giới",
+        "Liên Xô trở thành cường quốc công nghiệp thứ hai sau Mỹ (tăng trưởng 9.6%/năm), thay ��ổi cán cân quyền lực thế giới",
       significance: "Hỗ trợ tinh thần cho các phong trào giải phóng dân tộc",
       category: "international",
     },
@@ -268,7 +268,7 @@ export default function Index() {
                           + Hỗ trợ từ Liên Xô
                         </div>
                         <div className="text-green-600">
-                          + Liên minh Đông Dương
+                          + Liên minh Đông Dư��ng
                         </div>
                         <div className="text-green-600">
                           + Kháng chiến toàn dân
@@ -564,8 +564,8 @@ export default function Index() {
                             : "bg-yellow-500 hover:bg-yellow-400 hover:scale-110"
                         }`}
                         style={{
-                          left: `${phase.position.x}%`,
-                          top: `${phase.position.y}%`,
+                          left: phase.position.usePixels ? `${phase.position.x}px` : `${phase.position.x}%`,
+                          top: phase.position.usePixels ? `${phase.position.y}px` : `${phase.position.y}%`,
                           transform: "translate(-50%, -50%)",
                         }}
                         onClick={() =>
