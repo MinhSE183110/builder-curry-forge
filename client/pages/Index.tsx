@@ -108,7 +108,7 @@ export default function Index() {
       name: "Đợt 1: Him Lam và Độc Lập",
       date: "13-17/3/1954",
       description: "Tấn công và tiêu diệt các cứ điểm phía Bắc",
-      position: { x: 30, y: 20 },
+      position: { x: 216, y: 155, usePixels: true },
     },
     {
       id: "phase-2",
@@ -626,7 +626,7 @@ export default function Index() {
 
                   <div className="mt-4 p-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg">
                     <h5 className="font-semibold mb-2 text-green-800">
-                      Kết quả chiến thắng
+                      Kết quả chi��n thắng
                     </h5>
                     <p className="text-sm">
                       Diệt 16.200 địch, bắt sống Tướng De Castries, dẫn đến Hiệp
